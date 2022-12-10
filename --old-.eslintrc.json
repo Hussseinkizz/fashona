@@ -1,0 +1,71 @@
+{
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "autofix",
+    "react-hooks",
+    "jsx-a11y",
+    "prettier"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "autofix/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "type",
+          "external",
+          "builtin",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "react-hooks/exhaustive-deps": "error"
+  }
+}
